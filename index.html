@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>Calculator</title>
+
+    <!-- In <style> theoretisch der .css code -->
+    <style>    
+    </style>
+
+    <!-- für App: PWA Generator zB simicar.com verwenden -->
+
+    <!-- In <script> theoretisch der .js code -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="resultArea"></div>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td onclick="deleteLast()">DEL</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(7)">7</td>
+            <td onclick="appendOperation(8)">8</td>
+            <td onclick="appendOperation(9)">9</td>
+            <td class="highlight" onclick="appendOperation('/')">/</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(4)">4</td>
+            <td onclick="appendOperation(5)">5</td>
+            <td onclick="appendOperation(6)">6</td>
+            <td class="highlight" onclick="appendOperation('*')">X</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(1)">1</td>
+            <td onclick="appendOperation(2)">2</td>
+            <td onclick="appendOperation(3)">3</td>
+            <td class="highlight" onclick="appendOperation('+')">+</td>
+        </tr>
+        <tr>
+            <td onclick="appendOperation(0)">0</td>
+            <td class="highlight" onclick="appendOperation('.')">,</td>
+            <td id="gleichzeichen" onclick="calculateResult()">=</td>
+            <td class="highlight" onclick="appendOperation('-')">-</td>
+        </tr>
+    </table>
+</body>
+</html>
